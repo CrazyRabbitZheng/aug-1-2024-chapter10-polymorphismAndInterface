@@ -2,7 +2,7 @@
  * This is an abstract class used as superclass
  * @author--Zheng Wang
  */
-public abstract class Employee {
+public abstract class Employee implements Payable{
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
@@ -31,5 +31,9 @@ public abstract class Employee {
     }
 
     public abstract double earnings();//这是一个abstract method， 不override根本没用的method
+
+    public double getPaymentAmount(){
+        return earnings();
+    }
 }
 
